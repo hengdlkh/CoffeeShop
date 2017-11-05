@@ -100,7 +100,7 @@ The Tomcat web server runs on port 8080.
 
 ## Built With
 
-* [Eclipse](http://www.dropwizard.io/1.0.2/docs/) - The IDE used
+* [Eclipse](http://www.eclipse.org/downloads/) - The IDE used
 * [Maven](https://maven.apache.org/) - Dependency Management
 * [Google](https://github.com/googlemaps/google-maps-services-java/) - Google Geo Coding Api
 
