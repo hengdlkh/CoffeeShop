@@ -30,6 +30,7 @@ After compilation, the packaged file is a self executable jar file, with all dep
 
 ```
 git clone https://github.com/kishanraov/CoffeeShop.git
+cd CoffeeShop
 mvn clean package (or mvnw clean package) 
 java  -jar target/coffeeshop-service-0.0.1-SNAPSHOT.jar --apikey=provide a google geocode api key  --csvfile=full path of locations.csv
 
@@ -46,7 +47,7 @@ The Tomcat web server runs on port 8080.
 ```
   curl -XGET http://localhost:8080/hello
 ```
-  if you get a response, the installation is complete.
+  If you get a response, the installation is complete.
 
   * To get a coffee shop with id=1, use the command: 
 
@@ -57,10 +58,10 @@ The Tomcat web server runs on port 8080.
   * To create a new coffee shop location, use the command: 
 
 ```
-   curl -H "Content-Type: application/json" -X POST "http://localhost:8080/CoffeeShop/" -d '{ "name": "My favorite Coffee Shop", "address": "San Francisco, CA","latitude":37.7749295,"longitude":-122.4194155 }'
+  curl -H "Content-Type: application/json" -X POST "http://localhost:8080/CoffeeShop/" -d '{ "name": "My favorite Coffee Shop", "address": "San Francisco, CA","latitude":37.7749295,"longitude":-122.4194155 }'
 ```
 
-    Note the response on the command line
+  Note the response on the command line
 
 ```
   {"id":"57"} 
