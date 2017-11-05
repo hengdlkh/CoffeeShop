@@ -4,13 +4,13 @@ import javax.validation.constraints.NotNull;
 
 public class Location {
 	int id;
-	 @NotNull(message = "CoffeShop name can not be null.")
+	 @NotNull(message = "CoffeShop name can not be null")
 	String name;
-	 @NotNull(message = "CoffeShop address can not be null.")
+	 @NotNull(message = "CoffeShop address can not be null")
 	String address;
-	 @NotNull(message = "CoffeShop latitude can not be null.")
+	 @NotNull(message = "CoffeShop latitude can not be null")
 	Double latitude;
-	 @NotNull(message = "CoffeShop longitude can not be null.")
+	 @NotNull(message = "CoffeShop longitude can not be null")
 	Double longitude;
 	
 	public Location(){		

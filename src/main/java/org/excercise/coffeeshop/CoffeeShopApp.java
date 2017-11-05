@@ -13,7 +13,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication(scanBasePackages = {"org.excercise.domain","org.excercise.service","org.excercise.controller", "org.excercise.coffeeshop","org.excercise.Exception"})
+@SpringBootApplication(scanBasePackages = {"org.excercise.domain","org.excercise.service","org.excercise.controller", "org.excercise.coffeeshop","org.excercise.exception"})
 
 public class CoffeeShopApp 
 {
