@@ -1,4 +1,4 @@
-package org.excercise.Exception;
+package org.excercise.exception;
 
 public class ExceptionResponse {
 

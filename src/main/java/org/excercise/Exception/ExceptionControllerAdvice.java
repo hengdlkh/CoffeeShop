@@ -1,4 +1,4 @@
-package org.excercise.Exception;
+package org.excercise.exception;
 
 	
 import org.springframework.boot.context.config.ResourceNotFoundException;

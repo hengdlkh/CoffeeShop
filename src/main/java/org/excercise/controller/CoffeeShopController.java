@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
 
-import org.excercise.Exception.ExceptionResponse;
 import org.excercise.domain.Location;
+import org.excercise.exception.ExceptionResponse;
 import org.excercise.service.CoffeeShopService;
 import org.excercise.service.CoffeeShopServiceImpl;
 import org.excercise.service.GeoCodingService;
