@@ -22,10 +22,10 @@ public class CoffeeShopApp
     {
     	
     	StringBuilder Usage = new StringBuilder("Required Params: --csvfile=provide full path of locations.csv including name of the file \n");
-    							   Usage.append("       		  --apikey=provide google geocode api key");
+    	Usage.append("       		  --apikey=provide google geocode api key");
+    	
     	if(args.length <= 1){ 
-    		System.out.println(Usage.toString());
-    		
+    		System.out.println(Usage.toString());	
     		return;
     	}
     	else if (args.length >=2  && ( !(args[0].contains("--csvfile=")|| args[1].contains("--csvfile=")) || ! (args[0].contains("--apikey=") || args[1].contains("--apikey="))) ){
@@ -38,13 +38,11 @@ public class CoffeeShopApp
     	   f = new File(args[0].trim().split("=")[1]);
     	else if(args[1].contains("--csvfile="))
     	   f = new File(args[1].trim().split("=")[1]);
-    		
     	
     	if(!f.exists() || f.isDirectory()) {
     	    System.out.println("Invalid File Name:"+ f.getName());
     	    return;
     	}
-    	
     	
     	SpringApplication.run(CoffeeShopApp.class, args);
     	 
