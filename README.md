@@ -34,7 +34,7 @@ cd CoffeeShop
 mvn clean package (or mvnw clean package) 
 java  -jar target/coffeeshop-service-0.0.1-SNAPSHOT.jar --apikey=provide a google geocode api key  --csvfile=full path of locations.csv
 
-(Note: If you dont have an api key, pass any random string(example: abc, the application will still work, but the FindNearest api will not work)
+(Note: If you do not have an api key, pass any random string(example: abc, the application still works, but the FindNearest api will not work)
 
 The CSV file gets uploaded to cache. Whatever data you add or update will not be available once you restart the server. There is no persistence for the data.
 
