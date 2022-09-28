@@ -1,6 +1,5 @@
 package org.excercise.exception;
 
-	
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -24,17 +23,18 @@ public class ExceptionControllerAdvice{
         return new ResponseEntity<ExceptionResponse>(response, HttpStatus.NOT_FOUND);
     }
  	
- 	 @ExceptionHandler(MethodArgumentNotValidException.class)
-     public ResponseEntity<ExceptionResponse> invalidInput(MethodArgumentNotValidException ex) {
-         ExceptionResponse response = new ExceptionResponse();
-         response.setCode("Validation Error");
-         BindingResult br = ex.getBindingResult();
-         String mesg = br.getAllErrors().stream().map(x -> x.getDefaultMessage()).collect(Collectors.joining(","));
-         response.setMessage(mesg);
-         return new ResponseEntity<ExceptionResponse>(response, HttpStatus.BAD_REQUEST);
-     }
- 	 @ExceptionHandler(Exception.class)
-	public ResponseEntity<ExceptionResponse> exceptionHandler() {		
+ 	@ExceptionHandler(MethodArgumentNotValidException.class)
+        ExceptionResponse response = new ExceptionResponse();
+    public ResponseEntity<ExceptionResponse> invalidInput(MethodArgumentNotValidException ex) {
+        response.setCode("Validation Error");
+        BindingResult br = ex.getBindingResult();
+        String mesg = br.getAllErrors().stream().map(x -> x.getDefaultMessage()).collect(Collectors.joining(","));
+        response.setMessage(mesg);
+        return new ResponseEntity<ExceptionResponse>(response, HttpStatus.BAD_REQUEST);
+    }
+ 	@ExceptionHandler(Exception.class)
+	
+    public ResponseEntity<ExceptionResponse> exceptionHandler() {		
 		ExceptionResponse error = new ExceptionResponse("CofeeShopServicesApi","Invalid attribute name or invalid attribute case");
 		return new ResponseEntity<ExceptionResponse>(error, HttpStatus.PARTIAL_CONTENT);
 	} 
